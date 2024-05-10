@@ -1,4 +1,34 @@
-h1{color : red;}
-body{background-color: black;}
-h2{color : pink;}
-p{color : lavenderblush;}
+html,
+body,
+section {
+  block-size: 100%;
+}
+
+html {
+  scroll-snap-type: y mandatory;
+}
+
+section {
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+section:nth-of-type(even) {
+  color: blue;
+  background: lavender;
+}
+
+section:nth-of-type(odd) {
+  color: lavender;
+  background: blue;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, sans-serif;
+  font-size: 4rem;
+}
